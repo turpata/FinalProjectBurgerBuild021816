@@ -62,8 +62,6 @@ namespace FinalProjectBurgerBuild021816
         }
 
         
-
-       
         private void pnlStart_VisibleChanged(object sender, EventArgs e)
         {
             if (
@@ -121,7 +119,7 @@ namespace FinalProjectBurgerBuild021816
         }
 
 
-        /*button Click Events*/
+       //Yes Button Events 
         private void btnYes_Click(object sender, EventArgs e)
         {
             pnlComplete.Visible = true;
@@ -135,12 +133,21 @@ namespace FinalProjectBurgerBuild021816
 
         }
 
+        //NextButton Click
         private void btnNext_Click(object sender, EventArgs e)
         {
 
             switch (orderstep)
             {
-                
+                case "location":
+                    pnlStart.Visible = true;
+                    pnlLocation.Visible = false;
+                    break;
+
+                case "orderType":
+                    pnlOrderType.Visible = true;
+                    pnlLocation.Visible = false;
+                    break;
                 
                 case "build":
                     pnlBuild.Visible = false;
@@ -175,6 +182,7 @@ namespace FinalProjectBurgerBuild021816
 
             }
         }
+        //PreviousButton Click
 
         private void btnprevious_Click(object sender, EventArgs e)
         {
@@ -192,10 +200,7 @@ namespace FinalProjectBurgerBuild021816
                     pnlLocation.Visible = false;
                     break;
                 
-               
-
-                
-                case "build":
+               case "build":
                     pnlBuild.Visible = true;
                     pnlChooseBun.Visible = false;
                     break;
@@ -230,6 +235,8 @@ namespace FinalProjectBurgerBuild021816
 
         }
 
+
+        // Eat In and Take Out Click Events 
         private void btnEatIN_Click(object sender, EventArgs e)
         {
             takeOut = false;
@@ -247,6 +254,8 @@ namespace FinalProjectBurgerBuild021816
             pnlprevnext.Visible = true;
 
         }
+
+        // Click events
 
         private void btnSpecialty_Click(object sender, EventArgs e)
         {
@@ -333,6 +342,7 @@ namespace FinalProjectBurgerBuild021816
 
         }
 
+        //Button Click Events//
         private void btnNoCheese_Click(object sender, EventArgs e)
         {
             optionsArray[1] = "noCheese\n";
